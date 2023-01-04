@@ -9,7 +9,7 @@ urlpatterns = [
     
     ##REGISTROS Y LOGIN
     path('login/', login_request, name = 'Login'),
-    path('logout/', LogoutView.as_view(template_name='AppTraveling/logout.html'), name='Logout'),
+    path('logout/', LogoutView.as_view(template_name='AppTraveling/InicioALRE/logout.html'), name='Logout'),
     path('register/', register, name = 'Register'),
     path('editarUsuario/',editarUsuario,name = 'Editar usuario'),
     
@@ -19,7 +19,6 @@ urlpatterns = [
     path("Viajeros/",viajeros,name="Informacion de los viajeros"),
     path("EditarViajeros/<ViajC>",editarViajero,name="Editar viajeros"),
     path("BorrarViajeros/<ViajC>",borrarViajero,name="Borrar viajeros"),
-    path('buscar/',buscar,name="Buscar viajeros"),
     
     ##DESTINO CRUD
     path("AgregarDestino/",ADDdestino,name = 'Agregar destinos'),
