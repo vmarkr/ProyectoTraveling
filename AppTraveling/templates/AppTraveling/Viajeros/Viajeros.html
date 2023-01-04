@@ -1,0 +1,25 @@
+{% extends 'AppTraveling/padre.html'  %}
+
+{% block titulo %} Viajeros {% endblock titulo %}
+
+
+{% block descripcion %}
+<a href="{% url 'Agregar viajeros' %}">Agregar</a>
+
+    {% for v in viajeros %}
+
+        <li>{{v}}</li>
+
+        <button>
+            <a href="{% url 'Editar viajeros' v.nombre %}"> Actualizar </a>
+        </button>
+        <button>
+            <a href="{% url 'Borrar viajeros' v.nombre %}"> Eliminar </a>
+        </button>
+
+    {% endfor %}
+
+{% endblock descripcion %}
+
+
+

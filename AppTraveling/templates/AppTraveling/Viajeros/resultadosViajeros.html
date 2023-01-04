@@ -1,0 +1,31 @@
+{% extends 'AppTraveling/padre.html' %}
+
+{% block titulo %} Resultados búsqueda {% endblock titulo %}
+
+{% block body %}
+    <h1>Has buscado las reseñas de: {{busqueda}}</h1>
+
+{% endblock body %}
+{% block busquedas %}
+    {% if resultados %}
+
+        {% for r in resultados %}
+
+            <p>Nombre completo: {{r.nombre}} {{r.apellido}}</p>
+            <p>Edad: {{r.edad}}</p>
+            <p>Tiene: {{r.edad}}</p>
+            <p>Viaja a: {{r.destino}}</p>
+            
+
+            <p>********************************************************</p>
+
+        {% endfor %}
+
+        {% else %}
+
+        <p>No hay datos sobre esa persona.</p>
+
+    {% endif %}
+
+
+{% endblock busquedas %}

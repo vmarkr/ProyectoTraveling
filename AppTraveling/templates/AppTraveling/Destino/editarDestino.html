@@ -1,0 +1,20 @@
+{% extends 'AppTraveling/padre.html'  %}
+
+{% block titulo %} Modificar datos de los destinos {% endblock titulo %}
+
+
+{% block descripcion %}
+
+<form action "" enctype="multipart/form-data" method="post"> {% csrf_token %}
+
+    <table>
+
+        {{miFormulario.as_table}}
+
+    </table>
+
+        <input type="submit" value = "Modificar" >
+
+</form>
+
+{% endblock descripcion %}

@@ -1,0 +1,16 @@
+{% extends 'AppTraveling/padre.html'  %}
+
+{% block titulo %} Quiere cambiar sus datos? {% endblock titulo %}
+
+
+{% block descripcion %}
+
+<form action ""  method="post"> {% csrf_token %}
+
+{{ miFormulario.as_p }}
+
+<button type="submit">Cambiar</button>
+</form>
+
+
+{% endblock descripcion %}

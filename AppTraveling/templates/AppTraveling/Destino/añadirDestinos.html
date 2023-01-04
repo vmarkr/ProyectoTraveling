@@ -1,0 +1,18 @@
+{% extends 'AppTraveling/padre.html'  %}
+
+{% block titulo %} Nuevo Destino {% endblock titulo %}
+
+{% block descripcion %}
+    <form action="" method="POST"> {% csrf_token %}
+    
+        <p>
+
+            {{miFormulario.as_p}}
+
+        </p>
+
+            <input type="submit" value = "Guardar" >
+
+    </form>
+
+{% endblock %}

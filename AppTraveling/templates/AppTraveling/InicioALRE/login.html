@@ -1,0 +1,19 @@
+{% extends 'AppTraveling/padre.html' %}
+
+{% block titulo %} Iniciar sesion {% endblock titulo %}
+
+
+{% block descripcion %}
+
+    <form action ""  method="post"> {% csrf_token %}
+
+    {{ form.as_p }}
+    
+    <button type="submit">Iniciar</button>
+    </form>
+    <button><a href="{% url 'Register' %}"> Crear Cuenta </a> </button>
+
+{% endblock descripcion %}
+
+
+
