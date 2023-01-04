@@ -170,24 +170,6 @@ def borrarViajero(request,ViajC):
     
     return render(request,"AppTraveling/Viajeros/Viajeros.html",{'resultados':people})
 
-#####BUSCAR
-
-@login_required
-def buscar(request):
-
-    if request.GET["viajero"]:
-
-        nombre=request.GET['viajero']
-
-        resultados=viajero.objects.filter(nombre__icontains=nombre)
-
-        return render(request, "AppTraveling/Viajeros/resultadosViajeros.html",{"resultados":resultados, "busqueda":nombre})
-
-    else:
-
-        respuesta="No enviaste datos."
-
-    return HttpResponse(respuesta)
 
 ###########################################################################################################################################
 
